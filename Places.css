@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(68, 130, 212);
+}
+
+#maha{
+display: flex;
+height: 200px;
+
+background-color: rgb(204, 235, 255);
+border-radius: 20px;
+margin: 18px;
+justify-content: center;
+align-items: center;
+font-size: 70px;
+color: rgb(17, 0, 0);
+font-family:cursive;
+box-shadow: 0 5px 15px black;
+}
+
+.box{
+  
+    padding: 20px;
+    margin: 25px;
+    box-sizing: border-box;
+    background: rgb(255, 253, 253);
+    border-right: 35px solid slategrey ;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    display: flex;
+}
+
+.box .imgbox{
+    width: 150px;
+}
+
+.box .imgbox img{
+    width: 450px;
+    height: 350px;
+    
+    
+}
+
+img:hover{
+    border: 8px solid rgb(0, 25, 107);
+    border-radius: 18px;
+}
+
+.mahacontent{
+    margin-left: 350px;
+    
+    
+}
+
+.mahah2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+.mahacontent p{
+    font-size: 37px;
+}
+
+

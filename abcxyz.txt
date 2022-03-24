@@ -1,0 +1,48 @@
+ <!-- header section starts  -->
+
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+       
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>T</span>ravel <span>E</span>asy</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#packages">packages</a>
+            <a href="#services">services</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+    <!--sidebar start-->
+    <div class="sidebar">
+        <a href="#"><span>View profile</span></a>
+        <a href="#"><span>My trips</span></a>
+        <a href="#"><span>View bookings</span></a>
+        <a href="#"><span>Cancel bookings</span></a>
+        <a href="#"><span>Offers and deals</span></a>
+        <a href="#"><span>Saved</span></a>
+        <a href="#"><span>Travel essentials</span></a>
+        <a href="#"><span>Covid guidelines</span></a>
+        <a href="#"><span>Settings</span></a>
+
+    </div>
