@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Easy</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $("#txtfrom").datepicker({
+                numberOfMonths: 1,
+                dateFormat: 'DD,d MM,yy',
+                onSelect: function(selectdate) {
+                    var dt = new Date(selectdate);
+                    dt.setDate(dt.getDate() + 1)
+                    $("#txtto").datepicker("option", "minDate", dt);
+                }
+            });
+
+            $("#txtto").datepicker({
+                numberOfMonths: 1,
+                dateFormat: 'DD,d MM,yy',
+                onSelect: function(selectdate) {
+                    var dt = new Date(selectdate);
+                    dt.setDate(dt.getDate() - 1)
+                    $("#txtfrom").datepicker("option", "maxDate", dt);
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+
+
+    <!-- header section starts  -->
+
+    <!-- header section starts  -->
+
+    <header>
+
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>T</span>ravel <span>E</span>asy</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#packages">packages</a>
+            <a href="#services">services</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+
+
+
+    <!-- login form container  -->
+
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="enter your email">
+            <input type="password" class="box" placeholder="enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have and account? <a href="#">register now</a></p>
+        </form>
+
+    </div>
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3 id="quote">"It feels good to be lost in right direction "</h3>
+            <p>dicover new places with us, adventure awaits</p>
+            <a href="#" class="btn">discover more</a>
+        </div>
+
+        <div class="controls">
+            <span class="vid-btn active" data-src="C:\Users\Admin\Downloads\tour and travel website\vid-2.mp4"></span>
+            <span class="vid-btn" data-src="C:\Users\Admin\Downloads\tour and travel website\vid-1.mp4"></span>
+            <span class="vid-btn" data-src="C:\Users\Admin\Downloads\tour and travel website\vid-3.mp4"></span>
+
+        </div>
+
+        <div class="video-container">
+            <video src="C:\Users\Admin\Downloads\tour and travel website\vid-2.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- book section starts  -->
+
+    <section class="book" id="book">
+
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="Travelers-cuate (1).svg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <h3>where to</h3>
+                    <!-- <input type="text" placeholder="place name">-->
+                    <select class="select">
+
+                        <option>
+                            maharashtra
+                        </option>
+                        <option>
+                            kerala
+                        </option>
+                        <option>
+                            rajasthan
+                        </option>
+                        <option>
+                            himachal
+                        </option>
+                        <option>
+                            gujarat
+                        </option>
+                        <option>
+                            karnataka
+                        </option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <h3>number of guests</h3>
+                    <input type="number" placeholder="">
+                </div>
+                <div class="inputBox">
+                    <h3>arrivals</h3>
+                    <input id="txtfrom">
+                </div>
+                <div class="inputBox">
+                    <h3>leaving</h3>
+                    <input id="txtto">
+                </div>
+                <input type="submit" class="btn" value="book now">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- book section ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+        <a href="maharashtra.html">
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="maharashtra cover img.jpg" alt="">
+                    <div class="content">
+                        <h3> <i class="fas fa-map-marker-alt"></i> Maharashtra </h3>
+                        <a href="maharashtra.html">
+                            <p>The Land Of Lord Ganesha</p>
+                        </a>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <a href="#" class="btn">book now</a>
+                    </div>
+                </div>
+        </a>
+
+
+        <a href="kerala.html">
+
+            <div class="box">
+                <img src="kerela cover img.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Kerala </h3>
+                    <p>God’s Own Country</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="rajasthan.html">
+            <div class="box">
+                <img src="rajasthan cover img.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Rajasthan </h3>
+                    <p>The Land Of Maharajas</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="himachal.html">
+            <div class="box">
+                <img src="himachal cover img.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Himachal </h3>
+                    <p>A Nature Lover’s Paradise</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="gujarat.html">
+            <div class="box">
+                <img src="Gujarat.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Gujarat </h3>
+                    <p>jewel of the west</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="karnataka.html">
+            <div class="box">
+                <img src="karnataka cover img.jpg" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> karnataka </h3>
+                    <p>fusion of differnt culture </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">book now</a>
+                </div>
+            </div>
+
+            </div>
+        </a>
+    </section>
+
+    <!-- packages section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p></p>
+            </div>
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>food and drinks</h3>
+                <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>-->
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>safty guide</h3>
+                <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>-->
+            </div>
+            <!--<div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>around the world</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+            </div>-->
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>fastest travel</h3>
+                <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>-->
+            </div>
+            <!--<div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>adventures</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+            </div>-->
+
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading">
+            <span>g</span>
+            <span>a</span>
+            <span>l</span>
+            <span>l</span>
+            <span>e</span>
+            <span>r</span>
+            <span>y</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="beach-destination.jpg" alt="">
+                <div class="content">
+                    <h3>beach destination </h3>
+                    <p>Let the waves hit your feet, and the sand be your seat</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="kashmir-snowfall.jpg" alt="">
+                <div class="content">
+                    <h3>Hill stations</h3>
+                    <p>The best view comes after the hardest climb</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="weekend-getaway.jpg" alt="">
+                <div class="content">
+                    <h3>weekend getaways</h3>
+                    <p>escape the ordinary!</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="river-rafting.jpg" alt="">
+                <div class="content">
+                    <h3>adventure destination</h3>
+                    <p> You must go on adventures to find out where you truly belong.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="pilgrimage.jpg" alt="">
+                <div class="content">
+                    <h3>pilgrimage Sites</h3>
+                    <p> Faith is not the clinging to a shrine but an endless pilgrimage of the heart.</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="heritage.jpg" alt="">
+                <div class="content">
+                    <h3>heritage sites</h3>
+                    <p>Preserve cultural heritage, it defines the national identity of a country</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="C:\Users\Admin\Documents\2 mini project\Honeymoon-destination.jpg" alt="">
+                <div class="content">
+                    <h3>honeymoon sites</h3>
+                    <p>You are never too old to set another goal or to dream another dream</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="relaxation.jpg" alt="">
+                <div class="content">
+                    <h3>relaxation sites</h3>
+                    <p> It’s better to see something once than to hear about it a thousand times</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="staycation.jpg" alt="">
+                <div class="content">
+                    <h3>staycations</h3>
+                    <p> Take vacations, and go as many places as you can. ....</p>
+                    <a href="#" class="btn">see more</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+
+
+
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="download.jpeg" alt="">
+                        <h3>Monika </h3>
+                        <p>enjoyed my tour i will recomadated every one to choose this site for exploring your traval life!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="download (2).jpeg" alt="">
+                        <h3>payal</h3>
+                        <p>traval with friends and family make me feel good</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="download (1).jpeg" alt="">
+                        <h3>Shriya</h3>
+                        <p> this traval expereince made me independent and i can handle my expenses perfectly!!!! </p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="download.png" alt="">
+                        <h3>vivek</h3>
+                        <p> travel make me feel like enjoing every bit of life to fulliest !!!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="Flying around the world-amico (1).svg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="subject">
+                </div>
+                <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" class="btn" value="send message">
+            </form>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>r̥
+
+        </div>
+
+    </section>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="sript.js">
+    </script>
+
+</body>
+
+</html>
